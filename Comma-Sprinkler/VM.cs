@@ -17,7 +17,7 @@ namespace Comma_Sprinkler
         {
             get
             {
-                vm = vm ?? new VM();
+                vm ??= new VM();
                 return vm;
             }
         }
