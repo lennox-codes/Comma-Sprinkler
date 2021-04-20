@@ -35,14 +35,14 @@ beginning of a new one).
 ## Examples
 
 Display the result after applying Dr. Sprinkler’s algorithm to the original text.
-Sample Input 1
+ ### Sample Input 1
 `please sit spot. sit spot, sit. spot here now here.`
-Sample Output 1
+### Sample Output 1
 `please, sit spot. sit spot, sit. spot, here now, here.`
 
-Sample Input 2
+### Sample Input 2
 `one, two. one tree. four tree. four four. five four. six five.`
-Sample Output 2
+### Sample Output 2
 `one, two. one, tree. four, tree. four, four. five, four. six five.`
 
 
