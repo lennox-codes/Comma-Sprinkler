@@ -13,16 +13,6 @@ comma.
 
 3• Apply rules 1 and 2 repeatedly until no new commas can be added using either of them.
 
-## Example
-
-Consider the text below: 
-
- `please sit spot. sit spot, sit. spot here now here.`
- 
-Because there is a comma after spot in the second sentence, a comma should be added after spot in the third sentence as well (but not the first sentence, since it is the last word of that sentence). Also, because there is a comma before the word sit in the second sentence, one should be added before that word in the first sentence (but no comma is added before the word sit beginning the second sentence because it is the first word of that sentence). Finally, notice that once a comma is added after spot in the third sentence, there exists a comma before the first occurrence of the word here. Therefore, a comma is also added before the other occurrence of the word here. There are no more commas to be added so the final result is: 
-
-`please, sit spot. sit spot, sit. spot, here now, here.`
-
 ## Input Constraints
 
 The input contains one line of text, containing at least 2 characters and at most 1000000 characters. Each character is either a lowercase letter, a comma, a period, or a space. We define a word to be a maximal sequence of letters within the text. The text adheres to the following constraints:
@@ -34,15 +24,17 @@ beginning of a new one).
 
 ## Examples
 
-Display the result after applying Dr. Sprinkler’s algorithm to the original text.
- ### Sample Input 1
-`please sit spot. sit spot, sit. spot here now here.`
-### Sample Output 1
+Display the result after applying Dr. Sprinkler’s algorithm to the original text. Consider the text below: 
+
+ `please sit spot. sit spot, sit. spot here now here.`
+ 
+Because there is a comma after spot in the second sentence, a comma should be added after spot in the third sentence as well (but not the first sentence, since it is the last word of that sentence). Also, because there is a comma before the word sit in the second sentence, one should be added before that word in the first sentence (but no comma is added before the word sit beginning the second sentence because it is the first word of that sentence). Finally, notice that once a comma is added after spot in the third sentence, there exists a comma before the first occurrence of the word here. Therefore, a comma is also added before the other occurrence of the word here. There are no more commas to be added so the final result is: 
+
 `please, sit spot. sit spot, sit. spot, here now, here.`
 
-### Sample Input 2
+### Sample Input
 `one, two. one tree. four tree. four four. five four. six five.`
-### Sample Output 2
+### Sample Output
 `one, two. one, tree. four, tree. four, four. five, four. six five.`
 
 
