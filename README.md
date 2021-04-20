@@ -13,8 +13,9 @@ comma.
 
 3. Apply rules 1 and 2 repeatedly until no new commas can be added using either of them.
 
-##Example
-As an example, consider the text
+## Example
+
+Consider the text below: 
 
  `please sit spot. sit spot, sit. spot here now here.`
  
