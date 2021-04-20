@@ -18,8 +18,10 @@ comma.
 The input contains one line of text, containing at least 2 characters and at most 1000000 characters. Each character is either a lowercase letter, a comma, a period, or a space. We define a word to be a maximal sequence of letters within the text. The text adheres to the following constraints:
 
 1• The text begins with a word.
+
 2• Between every two words in the text, there is either a single space, a comma followed by a space, or a period followed by a space (denoting the end of a sentence and the
 beginning of a new one).
+
 3• The last word of the text is followed by a period with no trailing space.
 
 ## Examples
