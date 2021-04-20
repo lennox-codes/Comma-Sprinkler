@@ -24,7 +24,7 @@ beginning of a new one).
 
 ## Examples
 
-Display the result after applying Dr. Sprinkler’s algorithm to the original text. Consider the text below: 
+Display the result after applying Dr. Sprinkler’s algorithm to the original text. Consider the sample text below:
 
  `please sit spot. sit spot, sit. spot here now here.`
  
@@ -32,9 +32,9 @@ Because there is a comma after spot in the second sentence, a comma should be ad
 
 `please, sit spot. sit spot, sit. spot, here now, here.`
 
-### Sample Input
+### Sample Input 2
 `one, two. one tree. four tree. four four. five four. six five.`
-### Sample Output
+### Sample Output 2
 `one, two. one, tree. four, tree. four, four. five, four. six five.`
 
 
