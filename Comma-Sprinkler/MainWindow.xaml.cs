@@ -38,8 +38,6 @@ namespace Comma_Sprinkler
         private void SelectFile_Click(object sender, RoutedEventArgs e)
         {
             fs.OpenFileDialogForm();
-            vm.TextInput = fs.TextInput;
-            vm.FileName = fs.FileName;
             vm.SprinkleComma(vm.TextInput);
         }
 

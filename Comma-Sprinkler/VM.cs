@@ -19,8 +19,8 @@ namespace Comma_Sprinkler
         {
             get
             {
-                vm ??= null;
-                return new VM();
+                vm = vm ?? new VM();
+                return vm;
             }
         }
         #endregion
