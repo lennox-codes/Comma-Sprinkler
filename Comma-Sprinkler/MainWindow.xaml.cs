@@ -21,13 +21,15 @@ namespace Comma_Sprinkler
     /// </summary>
     public partial class MainWindow : Window
     {
-        VM vm = VM.Instance;
-        FileSystem fs = new FileSystem();
+        readonly VM vm = VM.Instance;
+        readonly FileSystem fs = new FileSystem();
 
+        /*
         string testCase1 = "please sit spot. sit spot, sit. spot here now here.";
         string testCase2 = "one, two. one tree. four tree. four four. five four. six five.";
         string testCase3 = "please sit spot, spot sit.";
         string testCase4 = "please sit spot. sit spot, sit. spot spot here now here";
+        */
 
         public MainWindow()
         {

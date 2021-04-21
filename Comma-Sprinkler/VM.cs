@@ -60,7 +60,7 @@ namespace Comma_Sprinkler
             string currentInput;
 
             foreach (string sentence in sentences)
-                PopulateWordsToApplyRulesLists(sentence);
+                PopulateWordsLists(sentence);
           
             foreach (string foundWord in wordsWithSucceedingCommas)
             {
@@ -127,7 +127,9 @@ namespace Comma_Sprinkler
             return words;
         }
 
-        private void PopulateWordsToApplyRulesLists(string sentence)
+
+        //Populates the lists of words with preceeding commas and succeeding commas.
+        private void PopulateWordsLists(string sentence)
         {
             if (sentence.Contains(','))
             {

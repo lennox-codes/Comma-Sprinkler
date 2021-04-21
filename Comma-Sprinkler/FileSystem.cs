@@ -11,7 +11,7 @@ namespace Comma_Sprinkler
         readonly VM vm = VM.Instance;      
         
         private OpenFileDialog ofd = new OpenFileDialog();
-      
+
         public StringBuilder Output { get; set; }
 
         public void OpenFileDialogForm()
