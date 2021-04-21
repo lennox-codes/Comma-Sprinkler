@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Comma_Sprinkler
 {
@@ -61,7 +59,7 @@ namespace Comma_Sprinkler
 
             foreach (string sentence in sentences)
                 PopulateWordsLists(sentence);
-          
+
             foreach (string foundWord in wordsWithSucceedingCommas)
             {
                 for (int i = 0; i < sentences.Length; i++)
@@ -81,7 +79,7 @@ namespace Comma_Sprinkler
                     sentences[i] = String.Join(" ", modifiedWords);
                 }
             }
-            
+
             currentInput = String.Join(". ", sentences) + ".";
 
             //This recursively calls the function by comparing the current and previous inputs.
@@ -98,31 +96,31 @@ namespace Comma_Sprinkler
         private string[] ApplyIfWordSucceededByComma(string[] words, string foundWord)
         {
             for (int i = 0; i < words.Length - 1; i++)
-            {               
+            {
                 string currentWord = words[i];
 
                 if (foundWord == currentWord && i != words.Length - 1)
                     words[i] = currentWord + ",";
             }
-              
-            return words;               
+
+            return words;
         }
 
         private string[] ApplyIfWordPreceededByComma(string[] words, string foundWord)
         {
             string firstWord = words[0];
 
-            for (int i = 1; i < words.Length ; i++)
+            for (int i = 1; i < words.Length; i++)
             {
                 string currentWord = words[i];
                 string previousWord = words[i - 1];
-               
+
                 if (!HasSucceedingComma(previousWord) && (currentWord == foundWord || currentWord == foundWord + ","))
-                    words[i - 1] = previousWord + ",";                  
+                    words[i - 1] = previousWord + ",";
             }
 
-            if (words[1] == foundWord  && !HasSucceedingComma(firstWord))
-                words[0] = firstWord  + ",";
+            if (words[1] == foundWord && !HasSucceedingComma(firstWord))
+                words[0] = firstWord + ",";
 
             return words;
         }
@@ -135,7 +133,7 @@ namespace Comma_Sprinkler
             {
                 string[] words = sentence.Split(new char[] { ' ' });
 
-                for (int i = 0; i < words.Length - 1; i++) 
+                for (int i = 0; i < words.Length - 1; i++)
                 {
                     string currentWord = words[i];
                     string nextWord = words[i + 1];

@@ -1,22 +1,20 @@
 ﻿using Microsoft.Win32;
 using System.IO;
-using System.Windows;
 using System.Text;
-using System.Windows.Controls;
 
 namespace Comma_Sprinkler
 {
     internal class FileSystem
     {
-        readonly VM vm = VM.Instance;      
-        
+        readonly VM vm = VM.Instance;
+
         private OpenFileDialog ofd = new OpenFileDialog();
 
         public StringBuilder Output { get; set; }
 
         public void OpenFileDialogForm()
         {
-            ofd = new OpenFileDialog()           
+            ofd = new OpenFileDialog()
             {
                 DefaultExt = "txt",
                 Filter = "txt files (*.txt)|*.txt",
