@@ -1,7 +1,7 @@
 # Comma-Sprinkler
 
 C# application that modifies sentences based on a specfic set of rules. <br>
-This was one of the problems from the International Collegiate Programming Contest (ACM-ICPC) World Finals 2018.
+This was one of The problems from the International Collegiate Programming Contest (ACM-ICPC) World Finals 2018.
 
 ## Rules And Logic
 
