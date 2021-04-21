@@ -10,9 +10,7 @@ namespace Comma_Sprinkler
 
         private OpenFileDialog ofd = new OpenFileDialog();
 
-        public StringBuilder Output { get; set; }
-
-        public void OpenFileDialogForm()
+        public bool OpenFileDialogForm()
         {
             ofd = new OpenFileDialog()
             {
@@ -29,6 +27,8 @@ namespace Comma_Sprinkler
                 vm.FileName = ofd.FileName;
                 vm.TextInput = File.ReadAllText(vm.FileName);
             }
+
+            return (bool)isSelected;
         }
     }
 }

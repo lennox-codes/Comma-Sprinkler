@@ -29,12 +29,6 @@
                     DockPanel.Dock="Right"
                     FontSize="18" 
                     Click="SelectFile_Click"/>
-            <Button  Name="Show" 
-                     Padding ="10 0"
-                     Content="Show" 
-                     DockPanel.Dock="Right"
-                     FontSize="18" 
-                     Click="Show_Click" />
             <TextBlock Grid.Row="0" 
                        Padding="10 0"
                        FontSize="12" 

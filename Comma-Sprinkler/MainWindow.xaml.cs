@@ -25,13 +25,8 @@ namespace Comma_Sprinkler
 
         private void SelectFile_Click(object sender, RoutedEventArgs e)
         {
-            fs.OpenFileDialogForm();
-            vm.SprinkleComma(vm.TextInput);
-        }
-
-        private void Show_Click(object sender, RoutedEventArgs e)
-        {
-
+            if (fs.OpenFileDialogForm())
+                vm.SprinkleComma(vm.TextInput);
         }
     }
 }
