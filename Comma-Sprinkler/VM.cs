@@ -8,8 +8,8 @@ namespace Comma_Sprinkler
 {
     internal class VM : INotifyPropertyChanged
     {
-        readonly List<string> wordsWithPreceedingCommas = new List<string>();
-        readonly List<string> wordsWithSucceedingCommas = new List<string>();
+        readonly List<string> wordsWithPreceedingComma = new List<string>();
+        readonly List<string> wordsWithSucceedingComma = new List<string>();
 
         #region Singleton
         private static VM vm;
@@ -51,16 +51,14 @@ namespace Comma_Sprinkler
         #region Methods
         public void SprinkleComma(string input)
         {
-            Output = "";
-
             string[] sentences = input.Split(new string[] { ". ", "." }, StringSplitOptions.RemoveEmptyEntries);
             string previousInput = input;
             string currentInput;
 
             foreach (string sentence in sentences)
-                PopulateWordsLists(sentence);
+                PopulateFoundWordsLists(sentence);
 
-            foreach (string foundWord in wordsWithSucceedingCommas)
+            foreach (string foundWord in wordsWithSucceedingComma)
             {
                 for (int i = 0; i < sentences.Length; i++)
                 {
@@ -70,7 +68,7 @@ namespace Comma_Sprinkler
                 }
             }
 
-            foreach (string foundWord in wordsWithPreceedingCommas)
+            foreach (string foundWord in wordsWithPreceedingComma)
             {
                 for (int i = 0; i < sentences.Length; i++)
                 {
@@ -87,8 +85,8 @@ namespace Comma_Sprinkler
                 SprinkleComma(currentInput);
             else
             {
-                wordsWithPreceedingCommas.Clear();
-                wordsWithSucceedingCommas.Clear();
+                wordsWithPreceedingComma.Clear();
+                wordsWithSucceedingComma.Clear();
                 Output = currentInput;
             }
         }
@@ -99,7 +97,7 @@ namespace Comma_Sprinkler
             {
                 string currentWord = words[i];
 
-                if (foundWord == currentWord && i != words.Length - 1)
+                if (foundWord == currentWord)
                     words[i] = currentWord + ",";
             }
 
@@ -127,7 +125,7 @@ namespace Comma_Sprinkler
 
 
         //Populates the lists of words with preceeding commas and succeeding commas.
-        private void PopulateWordsLists(string sentence)
+        private void PopulateFoundWordsLists(string sentence)
         {
             if (sentence.Contains(','))
             {
@@ -140,11 +138,11 @@ namespace Comma_Sprinkler
 
                     if (HasSucceedingComma(currentWord))
                     {
-                        if (!wordsWithSucceedingCommas.Contains(RemoveLastChar(currentWord)))
-                            wordsWithSucceedingCommas.Add(RemoveLastChar(currentWord));
+                        if (!wordsWithSucceedingComma.Contains(RemoveLastChar(currentWord)))
+                            wordsWithSucceedingComma.Add(RemoveLastChar(currentWord));
 
-                        if (!wordsWithPreceedingCommas.Contains(nextWord))
-                            wordsWithPreceedingCommas.Add(nextWord);
+                        if (!wordsWithPreceedingComma.Contains(nextWord))
+                            wordsWithPreceedingComma.Add(nextWord);
                     }
                 }
             }

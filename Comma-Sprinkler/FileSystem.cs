@@ -17,7 +17,9 @@ namespace Comma_Sprinkler
                 DefaultExt = "txt",
                 Filter = "txt files (*.txt)|*.txt",
                 FilterIndex = 2,
-                Multiselect = false
+                Multiselect = false,
+                Title = "Browse Text Files"
+                
             };
 
             bool? isSelected = ofd.ShowDialog();
