@@ -1,6 +1,6 @@
 # Comma-Sprinkler
 
-C# application which reads a text files creates an output based on a specfic set of rules. <br>
+C# application which reads a .txt file and creates an output based on a specfic set of rules. <br>
 This was one of The problems from the International Collegiate Programming Contest (ACM-ICPC) World Finals 2018.
 
 ## Rules And Logic
